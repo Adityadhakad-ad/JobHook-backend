@@ -60,10 +60,10 @@ public Job updateJob(Long id, Job updatedJob) {
 }
     
 
-    // 🔍 Search by skill
-    public List<Job> searchBySkill(String skill) {
-        return repository.findBySkillsContaining(skill);
-    }
+    // 🔍 Search by Title, Company, Location, Skills, Job Type, Description
+           public List<Job> searchJobs(String keyword) {
+            return repository.searchJobs(keyword);
+          }
 
     // 📍 Filter by location
     public List<Job> getByLocation(String location) {

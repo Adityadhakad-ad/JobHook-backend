@@ -53,9 +53,9 @@ public class JobController {
         return service.deleteJob(id);
     }
 
-    // 🔍 Search by skill
-    @GetMapping("/search")
-    public List<Job> searchJobs(@RequestParam String skill) {
-        return service.searchBySkill(skill);
-    }
+    // 🔍 Search by Title, Company, Location, Skills, Job Type, Description
+       @GetMapping("/search")
+       public List<Job> searchJobs(@RequestParam String keyword) {
+        return service.searchJobs(keyword);
+      }
 }
